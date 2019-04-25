@@ -517,6 +517,7 @@ TEST(Matrix4dTest, AffineTransform)
   mat = math::Matrix4d::Identity;
   EXPECT_NO_THROW(mat.TransformAffine(vec, v));
   EXPECT_TRUE(mat.TransformAffine(vec, v));
+  EXPECT_EQ(v, mat.TransformAffine(vec));
 }
 
 /////////////////////////////////////////////////
